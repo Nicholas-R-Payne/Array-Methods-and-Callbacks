@@ -3,6 +3,7 @@ const { fifaData } = require('./fifa.js')
 // ⚽️ M  V P ⚽️ //
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 1: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
+
 Practice accessing data by console.log-ing the following pieces of data note, you may want to filter the data first 😉*/
 const finals2014 = fifaData.filter(function(item){
     return item.Year === 2014 && item.Stage === 'Final';
@@ -82,7 +83,7 @@ Use the higher-order function getWinnersByYear to do the following:
 hint: the strings returned need to exactly match the string in step 4.
  */
 
-function getWinnersByYear(array, getYears, getWinners) {
+function getWinnersByYear(array, getFinals, getYears, getWinners) {
     const winners = getWinners(array, getFinals);
     const years = getYears(array, getFinals);
     const yearWinners = winners.map(function(item, index){
